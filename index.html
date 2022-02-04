@@ -72,10 +72,10 @@
           </div>
         </div>
         <div class="row justify-content-center fs-5 text-center">
-          <div class="col-4 md-5" data-aos="fade-down" data-aos-offset="200" data-aos-duration="500">
+          <div class="col-4 md-5" data-aos="fade-right" data-aos-offset="200">
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea minima temporibus distinctio magni facere officiis exercitationem animi. Facilis, eligendi fugiat.</p>
           </div>
-          <div class="col-4 md-5" data-aos="fade-down" data-aos-offset="200" data-aos-duration="1000">
+          <div class="col-4 md-5" data-aos="fade-left" data-aos-offset="200" data-aos-delay="200">
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur odio voluptatibus facilis laudantium a esse pariatur asperiores excepturi itaque fugiat! Dolor sapiente repellendus consequatur eum.</p>
           </div>
         </div>
@@ -100,7 +100,7 @@
         </div>
         <div class="row justify-content-center">
           <div class="col-md-4 mb-3">
-            <div class="card" data-aos="flip-left" data-aos-delay="50" data-aos-duration="500">
+            <div class="card" data-aos="flip-left" data-aos-delay="100" data-aos-duration="500">
               <img src="img/projects/1.jpg" class="card-img-top" alt="Projects1" />
               <div class="card-body">
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -108,7 +108,7 @@
             </div>
           </div>
           <div class="col-md-4 mb-3">
-            <div class="card" data-aos="flip-left" data-aos-delay="70" data-aos-duration="7500">
+            <div class="card" data-aos="flip-left" data-aos-delay="200" data-aos-duration="7500">
               <img src="img/projects/2.jpg" class="card-img-top" alt="Projects2" />
               <div class="card-body">
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -116,7 +116,7 @@
             </div>
           </div>
           <div class="col-md-4 mb-3">
-            <div class="card" data-aos="flip-left" data-aos-delay="100" data-aos-duration="1000">
+            <div class="card" data-aos="flip-left" data-aos-delay="300" data-aos-duration="1000">
               <img src="img/projects/3.jpg" class="card-img-top" alt="Projects3" />
               <div class="card-body">
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -124,7 +124,7 @@
             </div>
           </div>
           <div class="col-md-4 mb-3">
-            <div class="card" data-aos="flip-left" data-aos-delay="150" data-aos-duration="1250">
+            <div class="card" data-aos="flip-left" data-aos-delay="400" data-aos-duration="1250">
               <img src="img/projects/4.jpg" class="card-img-top" alt="Projects4" />
               <div class="card-body">
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -132,7 +132,7 @@
             </div>
           </div>
           <div class="col-md-4 mb-3">
-            <div class="card" data-aos="flip-left" data-aos-delay="200" data-aos-duration="1500">
+            <div class="card" data-aos="flip-left" data-aos-delay="500" data-aos-duration="1500">
               <img src="img/projects/5.jpg" class="card-img-top" alt="Projects5" />
               <div class="card-body">
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -154,7 +154,7 @@
     <!-- Gallery -->
     <section id="gallery">
       <div class="container">
-        <div class="row text-center mb3">
+        <div class="row text-center mb-3">
           <div class="col">
             <h2>Gallery</h2>
           </div>
@@ -278,7 +278,7 @@
       const galleryImage = document.querySelectorAll(".gallery-img");
 
       galleryImage.forEach((img, i) => {
-        img.dataset.aos = "face-down";
+        img.dataset.aos = "fade-down";
         img.dataset.aosDelay = i * 100;
         img.dataset.aosDuration = 1000;
       });
@@ -288,6 +288,19 @@
         duration: 2000,
       });
     </script>
+
+    <!-- GSAP -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/TextPlugin.min.js"></script>
+      gsap.registerPlugin(TextPlugin, );  
+      gsap.from(".jumbotron img", { duration: 1, rotateY: 360, opacity: 0 });
+      gsap.from(".navbar", { duration: 1.5, y: "-100", opacity: 0, ease: "bounce" });
+      gsap.from(".display-4", { duration: 1, x: -50, opacity: 0, dealay: 0.5, ease: "back" });
+
+    </script>
+    <!-- End GSAP -->
 
     <!-- Option 2: Separate Popper and Bootstrap JS -->
     <!--
